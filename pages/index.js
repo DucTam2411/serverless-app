@@ -21,14 +21,14 @@ export default function Home() {
     }, []);
 
     const style = {
-        "margin-top": "36px;",
+        "margin-top": "36px",
     };
     return (
         <div className="ui container">
-            <h1 class="ui center aligned header" style={style}>
-                Responsive UI Examples
+            <h1 className="ui center aligned header" style={style}>
+                Chicken Management System
             </h1>
-            <div class="ui divider"></div>
+            <div className="ui divider"></div>
             <h1>hello</h1>
 
             <ChickenTable chickens={panda} refreshChicken={loadChickens} />

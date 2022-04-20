@@ -1,24 +1,20 @@
 import React from "react";
+import ChickenRow from "./ChickenRow";
 
 export default function ChickenTable({ chickens, refreshChicken }) {
-    const deleteChicken = async (chicken) => {
-        const id = chicken._id;
-        alert(id);
-        try {
-            await fetch("/.netlify/functions/deleteChicken", {
-                method: "DELETE",
-                body: JSON.stringify({ id }),
-            });
-            refreshChicken();
-        } catch (err) {
-            console.error("AHHH", err);
-        }
-    };
+    if (!chickens.length) {
+        return (
+            <div className="ui center aligned text container">
+                Empty. You don't have any chickens
+            </div>
+        );
+    }
 
     return (
-        <table class="ui celled table">
+        <table className="ui celled table">
             <thead>
                 <tr>
+                    <th>Serial number</th>
                     <th>Type of chicken</th>
                     <th>Quantity</th>
                     <th>Delete</th>
@@ -27,28 +23,11 @@ export default function ChickenTable({ chickens, refreshChicken }) {
             <tbody>
                 {chickens.map((chicken) => {
                     return (
-                        <tr key={chicken._id}>
-                            <td>
-                                <h4 class="ui image header">
-                                    <div class="content">
-                                        {chicken.name} ({chicken.product_origin}
-                                        )
-                                        <div class="sub header">
-                                            {chicken.description}
-                                        </div>
-                                    </div>
-                                </h4>
-                            </td>
-                            <td>22</td>
-                            <td>
-                                <button
-                                    class="ui icon button"
-                                    onClick={() => deleteChicken(chicken)}
-                                >
-                                    <i class="delete icon"></i>
-                                </button>
-                            </td>
-                        </tr>
+                        <ChickenRow
+                            key={chicken._id}
+                            chicken={chicken}
+                            refreshChicken={refreshChicken}
+                        />
                     );
                 })}
             </tbody>

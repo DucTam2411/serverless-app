@@ -14,6 +14,8 @@ const GET_CHICKENS = `
                 description
                 product_origin
                 _id
+                number
+                marketId
             }
         }
     }

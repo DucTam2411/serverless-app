@@ -4,6 +4,7 @@ type Chicken {
     product_origin: String!
     description: String
     number: Int!
+    marketId: String!
 }
 type Query {
     allChickens: [Chicken!]!
