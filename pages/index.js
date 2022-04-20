@@ -18,7 +18,7 @@ export default function Home() {
     }, []);
 
     const style = {
-        "margin-top": "36px",
+        marginTop: "36px",
     };
     return (
         <div className="ui container">

@@ -10,6 +10,6 @@ exports.handler = async (event) => {
         return formattedResponse(200, data);
     } catch (err) {
         console.error(err);
-        return formattedResponse(500, { err: "SOMETHING IS FUCK UP" });
+        return formattedResponse(500, err);
     }
 };
