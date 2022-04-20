@@ -1,7 +1,4 @@
-import styles from "../styles/Home.module.css";
-import Chicken from "../components/chicken";
 import { useEffect, useState } from "react";
-import CardExampleCard from "../components/card";
 import ChickenTable from "../components/ChickenTable";
 
 export default function Home() {
