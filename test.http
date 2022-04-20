@@ -1,0 +1,9 @@
+DELETE http://localhost:8888/.netlify/functions/deleteChicken
+content-type: application/json
+
+{
+    "id" : "329444793801245257"
+}
+
+###
+GET http://localhost:8888/.netlify/functions/getChickens

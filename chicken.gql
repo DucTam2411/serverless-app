@@ -1,0 +1,10 @@
+type Chicken {
+    name: String!
+    type: String!
+    product_origin: String!
+    description: String
+    number: Int!
+}
+type Query {
+    allChickens: [Chicken!]!
+}
