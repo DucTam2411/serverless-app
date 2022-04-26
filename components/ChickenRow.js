@@ -14,7 +14,6 @@ export default function ChickenRow({ chicken, refreshChicken }) {
 
     const deleteChicken = async (chicken) => {
         const id = chicken._id;
-        alert(id);
         try {
             await fetch("/.netlify/functions/deleteChicken", {
                 method: "DELETE",
@@ -23,6 +22,19 @@ export default function ChickenRow({ chicken, refreshChicken }) {
             refreshChicken();
         } catch (err) {
             console.error("AHHH", err);
+        }
+    };
+
+    const updateChicken = async (chicken) => {
+        const new_chicken = { ...chicken, number: parseInt(quantity) };
+        console.log(new_chicken);
+        try {
+            await fetch("/.netlify/functions/updateChicken", {
+                method: "PUT",
+                body: JSON.stringify(new_chicken),
+            });
+        } catch (err) {
+            console.error("AHH", err);
         }
     };
 
@@ -64,7 +76,7 @@ export default function ChickenRow({ chicken, refreshChicken }) {
                     <button
                         style={buttonMargin}
                         className="ui primary icon button"
-                        onClick={() => deleteChicken(chicken)}
+                        onClick={() => updateChicken(chicken)}
                     >
                         <i className="save icon"></i> Save
                     </button>
