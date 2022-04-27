@@ -44,7 +44,7 @@ export default function Home() {
     }, []);
 
     const style = {
-        marginTop: "36px",
+        marginTop: "30px",
         fontSize: "2rem",
     };
     return (
@@ -54,22 +54,7 @@ export default function Home() {
             </h1>
             <div className="ui divider"></div>
 
-            {/* <h1>Overview</h1>
-
-            <Menu
-                onBoardClick={onBoardClick}
-                onCardClick={onCardClick}
-                onReportClick={onReportClick}
-            />
-
-            {isBoardClick && (
-                <ChickenTable chickens={panda} refreshChicken={loadChickens} />
-            )}
-
-            {isCardClick && <ChickenGrid chickens={panda} />} */}
-
-            {/* {isAdd && <AddChicken />}
-            <ChickenTable chickens={panda} refreshChicken={loadChickens} /> */}
+            <h1>Overview</h1>
 
             <ChickenOverviewTab
                 chickens={panda}

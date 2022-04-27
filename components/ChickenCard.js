@@ -6,8 +6,6 @@ export default function ChickenCard({ chicken }) {
         marginTop: "10px",
     };
 
-    let randomInt = Math.floor(Math.random() * 1000);
-
     const getChickenImage = () => {
         if (chicken.imageUrl) {
             return (
@@ -15,6 +13,8 @@ export default function ChickenCard({ chicken }) {
                     className="ui bordered image"
                     alt="chicken image"
                     src={chicken.imageUrl}
+                    width={500}
+                    height={500}
                 />
             );
         }
@@ -22,6 +22,9 @@ export default function ChickenCard({ chicken }) {
             <Image
                 className="ui bordered image"
                 alt="chicken image"
+                placeholder="blur"
+                width={500}
+                height={500}
                 src="https://i.pinimg.com/564x/d4/18/67/d418674b7da8d31e310a91e599626d7d.jpg"
             />
         );
@@ -42,8 +45,8 @@ export default function ChickenCard({ chicken }) {
                 </div>
                 <div className="extra content">
                     <a>
-                        <i className="circle icon"></i>
-                        Quantity {chicken.number}
+                        <i className="circle teal icon"></i>
+                        {chicken.number}
                     </a>
                 </div>
             </div>
