@@ -2,6 +2,7 @@ import React from "react";
 import { Tab } from "semantic-ui-react";
 import ChickenGrid from "./ChickenGrid";
 import ChickenTable from "./ChickenTable";
+import ChickenForm from "./ChickenForm";
 
 const ChickenOverviewTab = ({ chickens, refreshChicken }) => {
     const panes = [
@@ -20,7 +21,7 @@ const ChickenOverviewTab = ({ chickens, refreshChicken }) => {
         },
         {
             menuItem: "Report",
-            render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+            render: () => <ChickenForm />,
         },
     ];
 
