@@ -10,8 +10,12 @@ export default function ChickenTable({ chickens, refreshChicken }) {
         );
     }
 
+    const tableStyle = {
+        marginTop: "20px",
+    };
+
     return (
-        <table className="ui celled table">
+        <table className="ui celled table" style={tableStyle}>
             <thead>
                 <tr>
                     <th>Serial number</th>

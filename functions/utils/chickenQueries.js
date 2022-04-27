@@ -17,6 +17,7 @@ const GET_CHICKENS = `
                 number
                 marketId
                 type
+                imageUrl
             }
         }
     }

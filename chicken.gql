@@ -5,6 +5,7 @@ type Chicken {
     description: String
     number: Int!
     marketId: String!
+    imageUrl: String
 }
 type Query {
     allChickens: [Chicken!]!
