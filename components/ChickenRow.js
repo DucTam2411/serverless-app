@@ -4,10 +4,6 @@ import { useState } from "react";
 export default function ChickenRow({ chicken, refreshChicken }) {
     const [quantity, setQuantity] = useState(chicken.number);
 
-    const alignAction = {
-        textAlign: "center",
-    };
-
     const buttonMargin = {
         margin: "7px 10px",
     };

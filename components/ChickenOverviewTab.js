@@ -14,7 +14,7 @@ const ChickenOverviewTab = ({ chickens, refreshChicken }) => {
             render: () => (
                 <ChickenTable
                     chickens={chickens}
-                    refreshChicken={ReferenceError}
+                    refreshChicken={refreshChicken}
                 />
             ),
         },
@@ -30,10 +30,8 @@ const ChickenOverviewTab = ({ chickens, refreshChicken }) => {
                 pointing: true,
                 color: "teal",
                 inverted: true,
-                attached: false,
                 tabular: false,
             }}
-            renderActiveOnly={true}
             panes={panes}
         />
     );

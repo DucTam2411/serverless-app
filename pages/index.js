@@ -7,9 +7,6 @@ import ChickenOverviewTab from "../components/ChickenOverviewTab";
 
 export default function Home() {
     const [panda, setPanda] = useState([]);
-    const [isBoardClick, setIsBoardClick] = useState(false);
-    const [isCardClick, setIsCardClick] = useState(true);
-    const [isReportClick, setReportClick] = useState(false);
 
     const loadChickens = async () => {
         try {
@@ -19,24 +16,7 @@ export default function Home() {
         } catch (err) {
             console.error(err);
         }
-    };
-
-    const onBoardClick = (setSelectedItem) => {
-        setSelectedItem("board");
-        setIsBoardClick(true);
-        setIsCardClick(false);
-    };
-
-    const onCardClick = (setSelectedItem) => {
-        setSelectedItem("card");
-        setIsBoardClick(false);
-        setIsCardClick(true);
-    };
-
-    const onReportClick = (setSelectedItem) => {
-        setSelectedItem("report");
-        setIsBoardClick(false);
-        setIsCardClick(false);
+        console.log("Refreshing Chicken");
     };
 
     useEffect(() => {
